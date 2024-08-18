@@ -147,7 +147,8 @@ window.addEventListener("scroll", function (){
     for (let i = 0, len = parallaxItems.length; i < len; i++) {
       x = x * Number(parallaxItems[i].dataset.parallaxSpeed);
       y = y * Number(parallaxItems[i].dataset.parallaxSpeed);
-      parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px`;
+      //parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px`;
+      parallaxItems[i].style.transform = `translate3d(${Math.min(Math.max(x, -50), 50)}px, ${Math.min(Math.max(y, -50), 50)}px, 0px)`;
     }
 
   });
