@@ -1756,6 +1756,13 @@ textarea.input-field {
 
 }
 
+/* Media Screen max size 1024px */
+
+@media (max-width: 1024px) {
+  
+  html, body {overflow-x: hidden;}
+}
+
 /* Media Screen 1200PX or larger */
 
 @media (min-width: 1200px) {
