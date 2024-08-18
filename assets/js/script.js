@@ -153,4 +153,16 @@ window.addEventListener("scroll", function (){
 
   });
 
+  /////////////////////////////////////////////////////
+  window.addEventListener("scroll", function () {
+    if (this.scrollY > 50) {
+      header.classList.add("active");
+      backTopBtn.classList.add("active");
+      hideHeader();
+    } else {
+      header.classList.remove("active");
+      backTopBtn.classList.remove("active");
+    }
+  });
+
 

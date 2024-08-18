@@ -101,7 +101,18 @@
   box-sizing: border-box;
 }
 
-html, body { overflow-x: ;}
+/*********************/
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.container, .content, .section {
+  overflow-x: hidden;
+}
+/*********************/
+
 
 li { list-style: none;}
 
@@ -1754,13 +1765,6 @@ textarea.input-field {
 
   .footer-list:last-child {order: 2;}
 
-}
-
-/* Media Screen max size 1024px */
-
-@media (max-width: 1024px) {
-  
-  html, body {overflow-x: hidden;}
 }
 
 /* Media Screen 1200PX or larger */
