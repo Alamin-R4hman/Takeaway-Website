@@ -101,18 +101,7 @@
   box-sizing: border-box;
 }
 
-/*********************/
-html, body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.container, .content, .section {
-  overflow-x: hidden;
-}
-/*********************/
-
+html, body { overflow-x: hidden;}
 
 li { list-style: none;}
 
@@ -179,7 +168,9 @@ body.loaded {overflow: overlay;}
 
 body.nav-active {overflow:hidden}
 
-::-webkit-scrollbar {width: 5px}
+::-webkit-scrollbar {
+  overflow-y: visible;
+  width: 5px;}
 
 ::-webkit-scrollbar-track {background-color: transparent;}
 
@@ -1744,12 +1735,20 @@ textarea.input-field {
 
   /* Reservation */
 
-  .reservation-form {
+  /*.reservation-form {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
+  }*/
+
+  .reservation-form {
+    padding-left: 500px;
   }
 
-  /*.reservation .form-left {display: none;}*/
+  .reservation .form-right { margin-right: 25%; justify-content: center; align-items: center;}
+
+  .reservation .form-right .form-pattern {
+    width: max-content;
+  }
 
   /* Footer */
 
