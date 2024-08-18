@@ -101,7 +101,7 @@
   box-sizing: border-box;
 }
 
-html, body { overflow-x: hidden;}
+html, body { overflow-x: ;}
 
 li { list-style: none;}
 
