@@ -101,6 +101,8 @@
   box-sizing: border-box;
 }
 
+html, body { overflow-x: hidden;}
+
 li { list-style: none;}
 
 a,
