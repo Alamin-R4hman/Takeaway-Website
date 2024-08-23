@@ -101,8 +101,6 @@
   box-sizing: border-box;
 }
 
-html, body { overflow-x: hidden;}
-
 li { list-style: none;}
 
 a,
@@ -120,9 +118,7 @@ a {
   text-decoration: none;
 }
 
-img {
-  height: auto;
-}
+img {height: auto;}
 
 input,
 button,
@@ -168,9 +164,7 @@ body.loaded {overflow: overlay;}
 
 body.nav-active {overflow:hidden}
 
-::-webkit-scrollbar {
-  overflow-y: visible;
-  width: 5px;}
+::-webkit-scrollbar {width: 5px;}
 
 ::-webkit-scrollbar-track {background-color: transparent;}
 
@@ -217,7 +211,7 @@ body.nav-active {overflow:hidden}
 .title-4{font-size: var(--fontSize-title-4);}
 
 .body-1{
-  font-size: var(--fontSize-body-2);
+  font-size: var(--fontSize-body-1);
   line-height: var(--lineHeight-6);
 }
 
@@ -475,16 +469,14 @@ body.nav-active {overflow:hidden}
   appearance: none;
   cursor: pointer;
 
-  padding-block-start: 0; /* Remove top padding */
-  padding-left: 40px; /* Increase left padding to make space for the icon */
-  padding-right: 30px; /* Increase right padding if you have an icon on the right */
+  padding-block-start: 0;
+  padding-left: 40px;
+  padding-right: 30px;
   height: 56px;
   line-height: 55px;
 }
 
-.icon-wrapper .ddmmyy {
-  padding-top: 12px;
-}
+.icon-wrapper .ddmmyy { padding-top: 12px;}
 
 .icon-wrapper ion-icon {
   position: absolute;
@@ -515,9 +507,7 @@ body.nav-active {overflow:hidden}
   z-index: 10;
   display: grid;
   place-content: center;
-  justify-items: center; /*added to help center text*/
-  align-items: center; /*added to help center text*/
-  text-align: center;
+  justify-items: center;
   transition: var(--transition-2);
 }
 
@@ -568,12 +558,6 @@ body.nav-active {overflow:hidden}
   0% {background-position: 100%;}
   100% {background-position: 0%;}
 }
-
-/*-----------------------------------*\
-  #HIDDEN SECTIONS
-\*-----------------------------------*/
-
-.hidden {display: none;}
 
 
 /*-----------------------------------*\
@@ -737,6 +721,7 @@ body.nav-active {overflow:hidden}
 }
 
 .navbar .contact-label { margin-block-end: 10px;}
+
 .navbar::-webkit-scrollbar-thumb { background-color: var(--white-alpha-10);}
 
 .overlay{
@@ -756,11 +741,6 @@ body.nav-active {overflow:hidden}
   opacity: 1;
   pointer-events: all;
 }
-
-
-
-
-
 
 
 /*-----------------------------------*\
@@ -975,13 +955,13 @@ body.nav-active {overflow:hidden}
   left: 50%;
   transform: translateX(-50%);
   width: 140px;
-  background-image: url(../images/img-pattern.svg);
+  background-image: url('../images/img-pattern.svg');
   background-repeat: repeat;
 }
 
 .about .abs-img-2::before {
   inset: 0;
-  background-image: url(../images/badge-2-bg.png);
+  background-image: url('../images/badge-2-bg.png');
   background-repeat: no-repeat;
   background-size: contain;
   animation: rotate360 15s linear infinite;
@@ -1009,17 +989,12 @@ body.nav-active {overflow:hidden}
   margin-block-end: 40px;
 }
 
-/* Original price hidden with display:none;*/
 .special-dish-content .del {
   text-decoration: none;
   color: var(--davys-grey);
-  display: none; 
 }
 
-.special-dish-content .span {
-  color: var(--gold-crayola);
-  font-size: var(--fontSize-body-1);
-}
+.special-dish-content .span {color: var(--gold-crayola);}
 
 .special-dish .btn {margin-inline: auto;}
 
@@ -1144,8 +1119,6 @@ body.nav-active {overflow:hidden}
 /*-----------------------------------*\
   #RESERVATION
 \*-----------------------------------*/
-
-.form-left {display: ;} 
 
 .reservation-form {margin-block-start: -270px;}
 
@@ -1333,11 +1306,11 @@ textarea.input-field {
   color: var(--white);
 }
 
-.footer-brand .icon-wrapper { margin-block-end: 0;}
-
 .footer-brand .icon-wrapper .input-field { cursor: text;}
 
 .footer-brand .btn {min-width: 100%;}
+
+.footer-brand ion-icon { margin-top: -4px;}
 
 .footer-list {
   display: grid;
@@ -1364,10 +1337,6 @@ textarea.input-field {
   display: inline;
   color: var(--gold-crayola);
   text-decoration: underline;
-}
-
-.footer-brand ion-icon {
-  margin-top: -33px;
 }
 
 /*-----------------------------------*\
@@ -1559,10 +1528,6 @@ textarea.input-field {
     min-width: max-content
   }
 
-  .footer-brand ion-icon {
-    margin-top: -4px;
-  }
-
 }
 
 
@@ -1658,8 +1623,6 @@ textarea.input-field {
 
   /* Topbar */
 
-  .topbar .hide {display: none;}
-
   .topbar-item:not(.link) {display: flex;}
   
   .topbar .item-2 {margin-inline-end: auto;}
@@ -1735,19 +1698,9 @@ textarea.input-field {
 
   /* Reservation */
 
-  /*.reservation-form {
+  .reservation-form {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
-  }*/
-
-  .reservation-form {
-    padding-left: 500px;
-  }
-
-  .reservation .form-right { margin-right: 25%; justify-content: center; align-items: center;}
-
-  .reservation .form-right .form-pattern {
-    width: max-content;
   }
 
   /* Footer */
@@ -1869,13 +1822,6 @@ textarea.input-field {
     margin-inline: 0;
   }
 
-  .special-dish-content .section-subtitle::after{
-    display: block;
-    width: 100px;
-    margin-inline: 15px;
-    margin-block-start: 5px;
-  }
-
   /* Menu */
 
   .menu .grid-list {
@@ -1908,15 +1854,8 @@ textarea.input-field {
 
   .about .shape {
     display: block;
-    top: 45%;
+    top: 46%;
     left: 0;
-  }
-
-  .garlic{
-    display: none;
-    position: absolute;
-    margin-top: 55px;
-    max-width: max-content;
   }
 
   /* Special Dish */

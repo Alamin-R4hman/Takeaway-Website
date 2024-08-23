@@ -47,7 +47,7 @@ let lastScrollPos = 0;
 
 const hideHeader = function () {
   const isScrollBottom = lastScrollPos < window.scrollY;
-  if(isScrollBottom) {
+  if (isScrollBottom) {
     header.classList.add("hide");
   } else {
     header.classList.remove("hide");
@@ -57,7 +57,7 @@ const hideHeader = function () {
 }
 
 window.addEventListener("scroll", function (){
-  if (this.window.scrollY > 50) {
+  if (this.window.scrollY >= 50) {
     header.classList.add("active");
     backTopBtn.classList.add("active");
     hideHeader();
@@ -85,8 +85,8 @@ window.addEventListener("scroll", function (){
     lastActiveSliderItem = heroSliderItems[currentSlidePos];
   }
 
-  const slideNext = function () {
-    if (currentSlidePos === heroSliderItems.length - 1) {
+  const slideNext = function () { //changed from === to >= 
+    if (currentSlidePos >= heroSliderItems.length - 1) {
      currentSlidePos = 0;
     } else {
       currentSlidePos++;
@@ -97,8 +97,8 @@ window.addEventListener("scroll", function (){
 
   heroSliderNextBtn.addEventListener("click", slideNext);
 
-  const slidePrev = function () {
-    if (currentSlidePos === 0) {
+  const slidePrev = function () { // changed from === <= 0
+    if (currentSlidePos <= 0) {
       currentSlidePos = heroSliderItems.length - 1;
     } else {
       currentSlidePos--;
@@ -147,8 +147,8 @@ window.addEventListener("scroll", function (){
     for (let i = 0, len = parallaxItems.length; i < len; i++) {
       x = x * Number(parallaxItems[i].dataset.parallaxSpeed);
       y = y * Number(parallaxItems[i].dataset.parallaxSpeed);
-      //parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px`;
-      parallaxItems[i].style.transform = `translate3d(${Math.min(Math.max(x, -50), 50)}px, ${Math.min(Math.max(y, -50), 50)}px, 0px)`;
+      parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px`;
+      // ALternate //parallaxItems[i].style.transform = `translate3d(${Math.min(Math.max(x, -50), 50)}px, ${Math.min(Math.max(y, -50), 50)}px, 0px)`;
     }
 
   });
